@@ -1,0 +1,228 @@
+:root {
+    --primary-color: #EC4899; /* Rosa */
+    --primary-hover: #DB2777;
+    --secondary-color: #8B5CF6; /* Lila für Sekundärbereiche */
+    --admin-color: #8B5CF6;
+    --user-color: #10B981;
+    --background-gradient: linear-gradient(135deg, #0F172A, #1E293B, #334155);
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --card-hover: rgba(255, 255, 255, 0.08);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--background-gradient);
+    color: #fff;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Styles */
+.navbar {
+    background: rgba(15, 20, 25, 0.98);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+}
+
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox=\'0 0 30 30\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath stroke=\'%23EC4899\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-miterlimit=\'10\' d=\'M4 7h22M4 15h22M4 23h22\'/%3E%3C/svg%3E');
+}
+
+.nav-link:hover {
+    color: var(--primary-color) !important;
+    transform: translateY(-2px);
+    transition: transform 0.2s ease;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(236, 72, 153, 0.4);
+}
+
+/* Card Styles */
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4);
+}
+
+/* Form Styles */
+.form-control, .form-select {
+    background-color: rgba(255, 255, 255, 0.08);
+    border: none;
+    color: #fff;
+    border-radius: 1rem;
+}
+
+.form-control:focus, .form-select:focus {
+    background-color: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 0 0 0.2rem rgba(236, 72, 153, 0.25);
+}
+
+/* Button Styles */
+.btn {
+    border-radius: 1rem;
+    padding: 0.6rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+.btn-outline-admin {
+    color: var(--admin-color);
+    border-color: var(--admin-color);
+}
+
+.btn-outline-admin:hover {
+    background-color: var(--admin-color);
+    color: white;
+}
+
+.btn-outline-user {
+    color: var(--user-color);
+    border-color: var(--user-color);
+}
+
+.btn-outline-user:hover {
+    background-color: var(--user-color);
+    color: white;
+}
+
+/* Table Styles */
+.table-dark th {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.badge-admin {
+    background-color: var(--admin-color);
+}
+
+.badge-user {
+    background-color: var(--user-color);
+}
+
+/* Password Strength Meter */
+.password-strength-meter {
+    height: 4px;
+    margin-top: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.password-strength-meter span {
+    display: block;
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #F472B6, #EC4899);
+    transition: width 0.3s ease;
+}
+
+/* User Card Hover */
+.user-card {
+    transition: transform 0.3s ease;
+}
+
+.user-card:hover {
+    transform: scale(1.01);
+}
+
+/* Icon Box */
+.icon-box {
+    background: rgba(236, 72, 153, 0.15);
+    border-radius: 1rem;
+    padding: 0.8rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+.icon-box i {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+/* Footer */
+.footer {
+    background: var(--glass-bg);
+    border-top: 1px solid var(--glass-border);
+    backdrop-filter: blur(10px);
+}
+
+.footer a:hover,
+.footer a.hover-pink {
+    color: var(--primary-color) !important;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.footer .form-control {
+    background-color: rgba(255, 255, 255, 0.08);
+    border: none;
+    color: #fff;
+    border-radius: 1rem;
+}
+
+.footer .form-control:focus {
+    background-color: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 0 0 0.2rem rgba(236, 72, 153, 0.25);
+}
+
+/* Back to Top Button */
+.back-to-top {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1050;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+@media (max-width: 768px) {
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .form-row {
+        flex-direction: column;
+    }
+}
